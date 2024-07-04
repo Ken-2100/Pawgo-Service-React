@@ -4,6 +4,7 @@ import carouselImg3 from './3.png';
 
 export default function CarouselOne() {
     return(
+      <section className='container mb-5' id='CarouselOne'> 
 <div id="myCarousel" className="carousel slide mb-6" data-bs-ride="carousel">
     <div className="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="" aria-label="Slide 1"></button>
@@ -51,6 +52,7 @@ export default function CarouselOne() {
       <span className="visually-hidden">Next</span>
     </button>
   </div>
+  </section>
       
     );
 

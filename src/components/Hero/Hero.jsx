@@ -2,7 +2,7 @@ import Hero1 from './hero1.png';
 
 function Hero() {
     return(
-        <>
+   
           <div className="container-fluid ">
       <div className="row align-items-center">
         <div className="col-lg-6">
@@ -19,8 +19,7 @@ function Hero() {
         </div>
       </div>
     </div>
-      
-        </>
+
     );
 }
 

@@ -5,6 +5,10 @@ import user3 from './user.jpg';
 
 export default function Feedback(){
     return(
+      <> 
+      <section className='h1 text-center my-5 position-relative '>
+      <p> FEEDBACK</p>
+        </section>
         <div className="container"> 
         <div className="d-flex d-row text-center mx-5 ">
       <div className="col-lg-4">
@@ -30,5 +34,6 @@ export default function Feedback(){
       </div>
     </div>
         </div>
+        </>
     );
 }
