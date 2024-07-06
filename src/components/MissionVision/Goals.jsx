@@ -19,12 +19,12 @@ export default function Goals(){
          <div className='container d-flex my-5 '>
         <About />
         <div className=' custom-about-bg p-5 rounded-5'>
-          <div className='row' >
-        <TabButton className='col' onSelect={()=> { handleClick('mission')}}> Mission</TabButton>
-        <TabButton className='col' onSelect={()=> { handleClick('vision')}}> Vision</TabButton>
+          <div className='row justify-content-between' >
+        <TabButton className='col-sm' onSelect={()=> { handleClick('mission')}}> Mission</TabButton>
+        <TabButton className='col-sm' onSelect={()=> { handleClick('vision')}}> Vision</TabButton>
         </div>  
 
-    {selectedTopic && <div className=" my-3 " style={{maxWidth: "35rem"}}>
+    {selectedTopic && <div className=" my-2 " style={{maxWidth: "35rem"}}>
     <div className="card-header h2 text-dark">{GOALS[selectedTopic].header}</div>
     <div className="card-body">
       <p className="card-title text-light">{GOALS[selectedTopic].topic}</p>
