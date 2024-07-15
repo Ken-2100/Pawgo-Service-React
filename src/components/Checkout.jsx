@@ -24,10 +24,11 @@ export default function Checkout(){
             <Input label="Postal Code" type="text" id="postal-code" />
             <Input label='City' type='text' id='city' /> 
            </div>
-           <ul className="checkout-button">
-            <Button type='button' onClick={()=>userProgressCtx.hideCheckout()}>
+           <ul className="checkout-button ">
+            <Button type='button' onClick={()=>userProgressCtx.hideCheckout()} className='mx-5'>
                 Close</Button>
-            <Button onClick={()=>{alert('Order Submitted'); userProgressCtx.hideCheckout()}}>Submit Order</Button>
+            <Button onClick={()=>{alert('Order Submitted'); userProgressCtx.hideCheckout()}}>
+                Submit Order</Button>
            </ul>
         </form>
     </Modal>
