@@ -128,8 +128,8 @@ code {
   height: 1.5rem;
   border-radius: 50%;
   border: none;
-  background-color: #312c1d;
-  color: #ffc404;
+  background-color: #000000;
+  color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,4 +140,5 @@ code {
   background-color: #1d1a16;
   color: #ffab04;
 }
+
 /* Modal & Cart END */

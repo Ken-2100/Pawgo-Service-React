@@ -27,8 +27,11 @@ export default function BookingInput(){
         <label htmlFor="Pname" className="me-2">Pet Name </label>
         <input type="text" id="Pname" name="Pname" placeholder="Enter Pet name" required></input>
 
-        <label htmlFor="Page" className="me-2">Pet Name </label>
-        <input type="text" id="Page" name="Page" placeholder="Enter Pet age" required></input>
+        <label htmlFor="PetAge" className="me-2">Pet Age </label>
+        <input type="text" id="PetAge" name="PetAge" placeholder="Enter Pet age" required></input>
+
+        <label htmlFor="Description" className="me-2">Description </label>
+        <input type='text' placeholder="e.g allergies..."/>
 
         </div>
         </>

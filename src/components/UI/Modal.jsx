@@ -7,14 +7,15 @@ export default function Modal({children, open, className = ''}){
         const modal = dialog.current;
         if(open){
             modal.showModal(); // this is built in method to show <dialog> element
-         
+         console.log('opening modal');
         }
-        return () => modal.close(); //cleanUp function
+        return () => modal.close() ; //cleanUp function
+      
       
     }, [open]);
 
-
-    return createPortal(<dialog ref={dialog} className={`modal ${className}`}>{children}</dialog>, document.getElementById('modal-display'))
+    return createPortal(<dialog ref={dialog} className={`simple-modal h-50 w-25 ${className}`}>{children}</dialog>, document.getElementById('modal'))
 
 }
 
+    

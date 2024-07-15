@@ -47,7 +47,7 @@ function handleShowCart(){
       <div className="col-md-3 ">
       <ul className="nav col-12 col-md-auto mb-2 mb-md-0 justify-content-end">
         <Button className="nav-link px-1 link-secondary"><Link to="/login" > <img src={userIcon} style={{height:"2rem"}} /></Link></Button>
-        <Button onClick={handleShowCart}><img src={cartIcon} style={{height:"2rem"}} />({totalCartItems})</Button>
+        <Button onClick={handleShowCart} className="nav-link px-1 link-secondary"><img src={cartIcon} style={{height:"2rem"}} />({totalCartItems})</Button>
       </ul>
       </div>
       </div>

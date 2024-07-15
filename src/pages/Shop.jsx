@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import FoodItem from '../components/Food-Products/FoodItem';
-
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 export default function Shop(){
   const [loadedFoods, setLoadedFoods] = useState([]);
@@ -18,11 +19,13 @@ export default function Shop(){
 
    return(
     <>
+    <Header />
     <p className='h1 text-center'>Shop</p>
     <ul id="foods">{loadedFoods.slice(13,25).map((foods) =>(
      <FoodItem key={foods.id} foods={foods}/>
     ))}
   </ul>
+  <Footer />
   </>
  );
  

@@ -1,78 +1,90 @@
-import {createContext, useReducer} from 'react';
+import { createContext, useReducer } from 'react';
 
+// Create CartContext with default values
 const CartContext = createContext({
-items: [],
-addItem: (item) => {},
-removeItem: (id) => {}
+    items: [],
+    addItem: (item) => {},
+    removeItem: (id) => {}
 });
 
-//return updated state & the param. 'action' will tell the fuction how to update the state
-function cartReducer(state, action){
-if(action.type === 'ADD_ITEM'){
-    // I now update the state to add a food item
-    const existingCartItemIndex = state.items.findIndex((item) => item.id === action.id );
-const updatedItem = [...state.items]; //i just create a new item array avoid mutating data
+// Cart reducer to manage state based on actions
+function cartReducer(state, action) {
+    if (action.type === 'ADD_ITEM') {
+        // Find index of the existing item in the cart
+        const existingCartItemIndex = state.items.findIndex((item) => item.id === action.item.id);
+        // Create a new array to avoid direct state mutation
+        const updatedItems = [...state.items];
 
-    if(existingCartItemIndex > -1){
-        const existingFoodItem = state.items[existingCartItemIndex];
-        const updatedItem = {
-            ...existingFoodItem,
-            quantity: existingFoodItem.quantity + 1 
-        };
-        updatedItem[existingCartItemIndex] = updatedItem;
-
-    } else {
-        updatedItem.push({...action.item, quantity: 1});
-
+        if (existingCartItemIndex > -1) {
+            // Item exists, increment its quantity
+            const existingItem = state.items[existingCartItemIndex];
+            const updatedItem = {
+                ...existingItem,
+                quantity: existingItem.quantity + 1
+            };
+            // Update the item in the new array
+            updatedItems[existingCartItemIndex] = updatedItem;
+        } else {
+            // New item, set its quantity to 1
+            updatedItems.push({ ...action.item, quantity: 1 });
+        }
+        // Return updated state
+        return { ...state, items: updatedItems };
     }
-    return {...state, items : updatedItem};
-} 
 
-if(action.type === 'REMOVE_ITEM'){
-    // REMOVE item from the state
-    const existingCartItemIndex = state.items.findIndex((item) => item.id === action.id );
-    const existingCartItem = state.items[existingCartItemIndex];
+    if (action.type === 'REMOVE_ITEM') {
+        // Find index of the existing item in the cart
+        const existingCartItemIndex = state.items.findIndex((item) => item.id === action.id);
+        // Create a new array to avoid direct state mutation
+        const updatedItems = [...state.items];
 
-   const updatedItem = [...state.items];
-    if(existingCartItem.quantity === 1){
-     
-        updatedItem.splice(existingCartItemIndex, 1);
-
-    }else {
-        const updatedItem = {
-            ...existingCartItem,
-            quantity: existingCartItem.quantity - 1,
-        };
-        updatedItem [existingCartItemIndex] = updatedItem;
+        if (existingCartItemIndex > -1) {
+            const existingItem = state.items[existingCartItemIndex];
+            if (existingItem.quantity === 1) {
+                // Remove item from the cart if quantity is 1
+                updatedItems.splice(existingCartItemIndex, 1);
+            } else {
+                // Decrement quantity if more than 1
+                const updatedItem = {
+                    ...existingItem,
+                    quantity: existingItem.quantity - 1,
+                };
+                // Update the item in the new array
+                updatedItems[existingCartItemIndex] = updatedItem;
+            }
+        }
+        // Return updated state
+        return { ...state, items: updatedItems };
     }
-    return {...state, items : updatedItem};
 
+    // Return unchanged state if action type does not match
+    return state;
 }
-return state; // then will return the UNCHANGE state 
-}
 
-export function CartContextProvider({children}) {
-    //add stateful logic to manage the add and remove items function defined above
-    //prefer to use Hook useReducer which is simpler than useState feature to more complex state and to make it easier to move the state out of this component function
-    const [cart, dispatchCartAction ]= useReducer(cartReducer,{ items: [] });
+// CartContextProvider to provide the cart state and functions to children
+export function CartContextProvider({ children }) {
+    // Use useReducer to manage the cart state
+    const [cart, dispatchCartAction] = useReducer(cartReducer, { items: [] });
 
-
-    function addItem(item){
-dispatchCartAction({type: 'ADD_ITEM', item });
+    // Function to add an item to the cart
+    function addItem(item) {
+        dispatchCartAction({ type: 'ADD_ITEM', item });
     }
 
+    // Function to remove an item from the cart
     function removeItem(id) {
-        dispatchCartAction({type: 'REMOVE_ITEM', id })
-
+        dispatchCartAction({ type: 'REMOVE_ITEM', id });
     }
 
+    // Context value containing cart items and functions
     const cartContext = {
-        items : cart.items,
+        items: cart.items,
         addItem,
-        removeItem //javascript shortcut of removeItem : removeItem
+        removeItem
     };
-    console.log(cartContext);
-    return <CartContext.Provider value={cartContext}>{children}</CartContext.Provider>
-};
+
+    // Provide the cart context to children components
+    return <CartContext.Provider value={cartContext}>{children}</CartContext.Provider>;
+}
 
 export default CartContext;
