@@ -4,7 +4,7 @@ import BookingInput from "../Booking/BookingInput";
 function Card({title, image, cardDescription}) {
     return(
       <>
-        <div className="card me-5" style={{width: "15rem"}}>
+        <div className="card border-0" style={{width: "15rem"}}>
         <img src={image} className="card-img-top" alt="..."/>
   <div className="card-img-overlay text-end text-light d-flex-inline align-self-end ">
     <h5 className="card-title">{title}</h5>
@@ -28,7 +28,6 @@ function Card({title, image, cardDescription}) {
         <form className="container-fluid">
         <BookingInput/>
   
-        
         </form>
       
       </div>

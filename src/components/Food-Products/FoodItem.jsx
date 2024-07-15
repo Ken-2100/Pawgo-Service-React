@@ -1,0 +1,28 @@
+import { useContext } from "react";
+import CartContext from '../../store/CartContext';
+
+export default function FoodItem({foods}){
+    const cartCtx = useContext(CartContext);
+    function handleAddFoodToCart(){
+        cartCtx.addItem(foods)
+
+
+    }
+    return(
+        <li className="food-item">
+            <div className="item-card">
+                <img src={foods.category.image} alt={foods.category.name}/>
+                <div >
+                    <h3>{foods.category.name}</h3>
+                   
+                    <p className="food-item-description">{foods.description.substring(0,60)}</p>
+                </div>
+    
+                <div className="food-item-actions d-flex justify-content-around">
+                <dt className="food-item-price">₱{foods.price}</dt>
+                    <button className="btn btn-outline-light" onClick={handleAddFoodToCart}>Add to  Cart</button>
+                </div>
+            </div>
+        </li>
+    )
+}

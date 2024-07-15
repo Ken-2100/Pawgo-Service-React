@@ -3,7 +3,7 @@ export const INPUTLABEL = {
         name: ' Fullname '
     },
     fulladdress : {
-        address : ' Adress '
+        address : ' Address '
     },
     Petname : {
         namePet : " Pet Name "

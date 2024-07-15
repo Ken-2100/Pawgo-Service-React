@@ -1,6 +1,7 @@
 import carouselImg1 from './1.png';
 import carouselImg2 from './2.png';
 import carouselImg3 from './3.png';
+import {Link} from 'react-router-dom';
 
 export default function CarouselOne() {
     return(
@@ -18,7 +19,7 @@ export default function CarouselOne() {
           <div className="carousel-caption text-start">
             <h1>Pawsitive Health Care</h1>
             <p className="opacity-75">Advanced Care for Your Furry Family Members</p>
-            <p><a className="btn btn-lg btn-dark" href="#">Book Now</a></p>
+            {/* <p><Link className="btn btn-lg btn-dark" to="/service">Book Now</Link></p> */}
           </div>
         </div>
       </div>
@@ -29,7 +30,7 @@ export default function CarouselOne() {
           
             <h1>Pawsitively Perfect Grooming</h1>
             <p>Personalized Grooming with a Loving Touch</p>
-            <p><a className="btn btn-lg btn-dark" href="#">Book Now</a></p>
+            {/* <p><Link className="btn btn-lg btn-dark" to="/service">Book Now</Link></p> */}
           </div>
         </div>
       </div>
@@ -38,7 +39,7 @@ export default function CarouselOne() {
           <div className="carousel-caption text-end">
             <h1 className='text-light'> Purrfect Manners Training</h1>
             <p className='text-light'>Empowering Owners, Enriching Pets’ Lives</p>
-            <p><a className="btn btn-lg btn-dark" href="#">Book Now</a></p>
+            {/* <p><Link className="btn btn-lg btn-dark" to="/service">Book Now</Link></p> */}
           </div>
         </div>
       </div>

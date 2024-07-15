@@ -18,7 +18,7 @@ export default function Goals(){
          </section>
          <div className='container d-flex my-5 '>
         <About />
-        <div className=' custom-about-bg p-5 rounded-5'>
+        <div className='custom-about-bg p-5 rounded-5'>
           <div className='row justify-content-between' >
         <TabButton className='col-sm' onSelect={()=> { handleClick('mission')}}> Mission</TabButton>
         <TabButton className='col-sm' onSelect={()=> { handleClick('vision')}}> Vision</TabButton>

@@ -12,27 +12,27 @@ export default function AllCards(){
       <p>SERVICES</p>
       </section>
 
-      <div className='container my-5'>
-      <div className=' d-flex d-row justify-content-around ' >
-      <div className='row'>
+      <div className='container  my-5'>
+      <div className='row justify-content-around g-3 '>
 
-        <Card className="col col-md-12" 
+        <Card className="col" 
     title="PawGo Grooming"
       cardDescription=" "      
       image = {image1}
       />
-      <Card className="col col-md-12" 
+      <Card className="col" 
     title="PawGo Treatment"
       cardDescription=" "
       image = {image2}
       />
-      <Card className="col col-md-12" 
+      <Card className="col" 
     title="PawGo Training"
       cardDescription=" "
       image = {image3}
       />
+    
 
-      </div>
+
       </div>
       </div>
         </>

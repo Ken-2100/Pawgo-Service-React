@@ -1,19 +1,17 @@
 import { useState } from 'react';
 
 export default function TextInput({placeholderValue}) {
-    const [text, setText] = useState(" ");
-
-    const labelName = placeholderValue;
+    const [text, setText] = useState('');
   
   
     return (
       <form>
-        <label>{`${labelName}`}
+        <label>{``}
           <input
             type="text" 
             value={text}
             onChange={(e) => setText(e.target.value)}
-            placeHolder={`Enter ${placeholderValue}`}
+            placeholder={`Enter ${placeholderValue}`}
             required
           />
         </label>

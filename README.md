@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+lost API: 
+const url = 'https://airbnb45.p.rapidapi.com/api/v1/getUserProfileReviews?userId=464257363&from=host&page=1';
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': 'e9da1ea7b8msh988c1486462785fp1dcd90jsn99a333bd72f6',
+		'x-rapidapi-host': 'airbnb45.p.rapidapi.com'
+	}
+};
