@@ -8,6 +8,7 @@ import { Routes, Route} from 'react-router-dom';
 import { CartContextProvider } from './store/CartContext.jsx';
 import {UserProgressContextProvider} from './store/UserProgressContext.jsx';
 import Cart from './components/Cart.jsx';
+import Checkout from './components/Checkout.jsx';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
    <CartContextProvider >
    <GoTop />
    <Cart />
+   <Checkout />
 
    <Routes>
    <Route path='/' element={<Home />} />
