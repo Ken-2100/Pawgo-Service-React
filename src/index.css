@@ -145,7 +145,10 @@ code {
 
 /* Control Form  */
 
-
+.checkout-button {
+  display: flex;
+  justify-content: between;
+}
 .control {
   margin: 0.5rem 0;
   display: flex;

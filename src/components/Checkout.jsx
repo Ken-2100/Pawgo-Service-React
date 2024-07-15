@@ -15,7 +15,7 @@ export default function Checkout(){
     return <Modal open={userProgressCtx.progress === 'checkout'}>
         <form >
             <h2>Checkout</h2>
-            <p>total Amount{cartTotal}</p>
+            <p className="h2">total Amount{` : ₱${cartTotal}`}</p>
 
             <Input label='Full Name' type='text' id='full-name'/>
            <Input label='Email' type='email' id='email'/>
@@ -24,10 +24,10 @@ export default function Checkout(){
             <Input label="Postal Code" type="text" id="postal-code" />
             <Input label='City' type='text' id='city' /> 
            </div>
-           <ul>
+           <ul className="checkout-button">
             <Button type='button' onClick={()=>userProgressCtx.hideCheckout()}>
                 Close</Button>
-            <Button onClick={()=>alert('Order Submitted')}>Submit Order</Button>
+            <Button onClick={()=>{alert('Order Submitted'); userProgressCtx.hideCheckout()}}>Submit Order</Button>
            </ul>
         </form>
     </Modal>
