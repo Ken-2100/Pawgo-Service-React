@@ -33,7 +33,7 @@ export default function Cart(){
         <div className='modal-actions'>
             <Button onClick={handleCloseCart}>Close</Button>
             {/* check if there is an item on a cart to show or display the checkout button */}
-           {cartCtx.items.length > 0 && (<Button onClick={()=>{userProgressCtx.showCheckout();
+           {cartCtx.items.length > 0 && (<Button className='btn-dark' onClick={()=>{userProgressCtx.showCheckout();
            }}>Checkout</Button>)} 
         </div>
     </Modal>

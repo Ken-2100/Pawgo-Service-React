@@ -17,7 +17,8 @@ export default function Checkout(){
             <h2>Checkout</h2>
             <p className="h2">total Amount{` : ₱${cartTotal}`}</p>
 
-            <Input label='Full Name' type='text' id='full-name'/>
+            {/*input fullName OR be set dynamically from user login e.g{user.name}*/}
+            <Input label='Full Name' type='text' id='full-name'/> 
            <Input label='Email' type='email' id='email'/>
            <Input label='Street' type='text' id='street'/>
            <div className="control-row">
@@ -25,9 +26,9 @@ export default function Checkout(){
             <Input label='City' type='text' id='city' /> 
            </div>
            <ul className="checkout-button ">
-            <Button type='button' onClick={()=>userProgressCtx.hideCheckout()} className='mx-5'>
+            <Button type='button' onClick={()=>userProgressCtx.hideCheckout()} >
                 Close</Button>
-            <Button onClick={()=>{alert('Order Submitted'); userProgressCtx.hideCheckout()}}>
+            <Button className='btn-dark mx-5' onClick={()=>{alert(`Order Submitted`); userProgressCtx.hideCheckout()}}>
                 Submit Order</Button>
            </ul>
         </form>
