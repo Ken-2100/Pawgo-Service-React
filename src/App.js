@@ -9,6 +9,7 @@ import { CartContextProvider } from './store/CartContext.jsx';
 import {UserProgressContextProvider} from './store/UserProgressContext.jsx';
 import Cart from './components/Cart.jsx';
 import Checkout from './components/Checkout.jsx';
+import Register from './pages/Register.jsx';
 
 
 function App() {
@@ -27,9 +28,10 @@ function App() {
      <Route path='/shop' element={<Shop />} />
      <Route path='/aboutUs' element={<AboutUs />} />
      <Route path='/login' element={<LoginPage />} />
+     <Route path='/register' element={<Register />} />
   
     </Routes>
-       
+ 
    </CartContextProvider>
    </UserProgressContextProvider>
 
