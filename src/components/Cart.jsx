@@ -17,7 +17,10 @@ export default function Cart(){
         userProgressCtx.hideCart();
      }
 
-    return <Modal className='cart' open={userProgressCtx.progress === 'cart'}>
+    return <Modal className='cart' 
+    open={userProgressCtx.progress === 'cart'}
+    onClose={userProgressCtx.progress === 'cart' ? handleCloseCart : null }
+    >
         <h2>Your Cart</h2>
         <ul>
             {cartCtx.items.map(item => 
