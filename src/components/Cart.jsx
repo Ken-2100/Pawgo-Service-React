@@ -31,7 +31,7 @@ export default function Cart(){
         </ul>
         <p className='cart-total'>{`₱${cartTotal}`}</p>
         <div className='modal-actions'>
-            <Button onClick={handleCloseCart}>Close</Button>
+            <Button className='btn-outline-danger' onClick={handleCloseCart}>Close</Button>
             {/* check if there is an item on a cart to show or display the checkout button */}
            {cartCtx.items.length > 0 && (<Button className='btn-dark' onClick={()=>{userProgressCtx.showCheckout();
            }}>Checkout</Button>)} 

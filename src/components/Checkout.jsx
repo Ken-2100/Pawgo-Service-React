@@ -26,9 +26,9 @@ export default function Checkout(){
             <Input label='City' type='text' id='city' /> 
            </div>
            <ul className="checkout-button ">
-            <Button type='button' onClick={()=>userProgressCtx.hideCheckout()} >
+            <Button className='btn-outline-danger' type='button' onClick={()=>userProgressCtx.hideCheckout()} >
                 Close</Button>
-            <Button className='btn-dark mx-5' onClick={()=>{alert(`Order Submitted`); userProgressCtx.hideCheckout()}}>
+            <Button className='btn-dark mx-3' onClick={()=>{alert(`Order Submitted`); userProgressCtx.hideCheckout()}}>
                 Submit Order</Button>
            </ul>
         </form>
