@@ -12,13 +12,13 @@ import Footer from '../components/Footer/Footer';
 export default function Home(){
     return(
         <>
-        <Header />
+    <Header />
    <CarouselOne  />
    <Goals />
    <Hero />
    <AllCards />
    <Feedback />
-       <Footer />
+    <Footer />
         </>
     )
 }

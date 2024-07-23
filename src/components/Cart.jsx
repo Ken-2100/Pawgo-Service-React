@@ -22,7 +22,7 @@ export default function Cart(){
         <ul>
             {cartCtx.items.map(item => 
            <CartItem key={item.id} 
-           name={item.name}
+           itemName={item.category.name}
            quantity={item.quantity}
            price={item.price}
            onIncrease={()=> cartCtx.addItem(item)}

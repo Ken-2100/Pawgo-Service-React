@@ -5,16 +5,16 @@ export default function Feedback(){
   
   //  <!>prevent infinite loop of data
   // GET data from external API reqres.in
-// useEffect(() => {
-//   fetch('https://reqres.in/api/users?page=2')
-//     .then((response) => response.json()) //avoid putting '{}'  to RETURN the VALUE with '{}' will be treated as an EXPRESSION
-//     .then((feedbackData) => {
-//       setArray(feedbackData.data);
-//     })
-//     .catch((error) => {
-//       console.error("Error fetching data:", error);
-//     });
-// }, []);
+useEffect(() => {
+  fetch('https://reqres.in/api/users?page=2')
+    .then((response) => response.json()) //avoid putting '{}'  to RETURN the VALUE with '{}' will be treated as an EXPRESSION
+    .then((feedbackData) => {
+      setArray(feedbackData.data);
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
+}, []); 
 
     return(
       <>

@@ -1,7 +1,7 @@
-export default function CartItem({name,quantity,price, onIncrease, onDecrease}){
+export default function CartItem({itemName,quantity,price, onIncrease, onDecrease}){
     return <li className="cart-item">
         <p>
-        {name} - {quantity} x {`₱ ${price}`}
+        {itemName} - {quantity}x {`₱${price}`}
         </p>
         <div className="cart-item-actions">
             <button onClick={onDecrease}>-</button>

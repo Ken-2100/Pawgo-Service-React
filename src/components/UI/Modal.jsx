@@ -7,7 +7,6 @@ export default function Modal({children, open, className = ''}){
         const modal = dialog.current;
         if(open){
             modal.showModal(); // this is built in method to show <dialog> element
-         console.log('opening modal');
         }
         return () => modal.close() ; //cleanUp function
       
