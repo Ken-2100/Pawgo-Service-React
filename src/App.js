@@ -10,6 +10,8 @@ import {UserProgressContextProvider} from './store/UserProgressContext.jsx';
 import Cart from './components/Cart.jsx';
 import Checkout from './components/Checkout.jsx';
 import Register from './pages/Register.jsx';
+import FeedbackForm from './components/Feedback/FeedbackForm.jsx';
+
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
    <GoTop />
    <Cart />
    <Checkout />
+   <FeedbackForm />
+
 
    <Routes>
    <Route path='/' element={<Home />} />
