@@ -1,3 +1,4 @@
+import Button from '../UI/Button';
 import Hero1 from './hero1.png';
 import { Link } from 'react-router-dom';
 
@@ -14,9 +15,8 @@ function Hero() {
             <h1 className="display-3 fw-bold text-body-emphasis">What you have here?</h1>
             <p className="lead">Give Your Fur Baby Its Favorites </p>
             <div className="d-sm-flex">
-            <Link to='/shop'  ><button type="button"  className='btn btn-dark btn-lg px-4'>See Products</button></Link>
+            <Link to='/shop'  ><Button type="button"  className='btn-dark btn-lg px-4'>See Products</Button></Link>
             
-              {/* <button type="button" className="btn btn-dark btn-lg px-4">See Services</button> */}
             </div>
           </div>
         </div>

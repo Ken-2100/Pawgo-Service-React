@@ -228,7 +228,14 @@ text-align: center;
 }
 
 .simple-modal::backdrop {
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.887);
+}
+
+.custom-login-btn {
+  background-color: #a82323;
+}
+.custom-signup-btn {
+  background-color: #a82323;
 }
 
 @keyframes fade-slide-up {

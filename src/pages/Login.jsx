@@ -3,6 +3,7 @@ import Header from "../components/Header/Header";
 import Button from "../components/UI/Button";
 import Input from "../components/UI/InputBlock";
 import { Link } from "react-router-dom";
+import logoSVG from './logo-transparent.png';
 
 export default function LoginPage(){
     function handleSubmit(event){
@@ -16,20 +17,27 @@ export default function LoginPage(){
     return(
         <>
         <Header />
-        <div className="form-signup bg-dark ">
+        <div className="form-signup bg-dark">
+            <div className="container row">
        
-        <form className="container py-5 text-light " onSubmit={handleSubmit}>
+        <form className="col col-md-6 py-5 text-light " onSubmit={handleSubmit}>
             <p className="h2 text-light">Log In</p>
         
             <Input type="email" name='login' id='email'  label='Email or Username'/> 
             <Input type="password" name='password' id='password'  label='Password'/> 
         
-            <Button className="btn btn-primary" type="submit"> Login </Button>
+        <div className="d-grid col-md-6">
+            <Button className="btn-warning" type="submit"> Login </Button>
+            </div>
             <p className="">New to Pawgo Shop? <Link className="text-danger link-underline-dark" to='/register'>Sign Up</Link> </p>
   
 
         
         </form>
+        <div className="col col-md-6 d-flex justify-content-center">
+        <img src={logoSVG} style={{height:"10rem"}} />
+        </div>
+        </div>
         </div>
         <Footer />
         </>

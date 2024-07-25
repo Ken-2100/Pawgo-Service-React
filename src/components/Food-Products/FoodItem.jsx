@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import CartContext from '../../store/CartContext';
+import Button from "../UI/Button";
 
 export default function FoodItem({foods}){
     const cartCtx = useContext(CartContext);
@@ -20,7 +21,7 @@ export default function FoodItem({foods}){
     
                 <div className="food-item-actions d-flex justify-content-around">
                 <dt className="food-item-price">₱{foods.price}</dt>
-                    <button className="btn btn-outline-light" onClick={handleAddFoodToCart}>Add to  Cart</button>
+                    <Button className="btn-outline-light" onClick={handleAddFoodToCart}>Add to  Cart</Button>
                 </div>
             </div>
         </li>

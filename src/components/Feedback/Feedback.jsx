@@ -30,7 +30,7 @@ function HandleShowFeedback(){
       <section className='h1 text-center my-5 position-relative '>
       <p> FEEDBACK</p>
 
-      <Button className="btn btn-dark" onClick={HandleShowFeedback}>
+      <Button className="btn-dark" onClick={HandleShowFeedback}>
         Send Feedback
       </Button>
         </section>
