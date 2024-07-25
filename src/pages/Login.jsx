@@ -18,7 +18,7 @@ export default function LoginPage(){
         <>
         <Header />
         <div className="form-signup bg-dark">
-            <div className="container row">
+            <div className="container row mx-auto">
        
         <form className="col col-md-6 py-5 text-light " onSubmit={handleSubmit}>
             <p className="h2 text-light">Log In</p>
@@ -35,7 +35,7 @@ export default function LoginPage(){
         
         </form>
         <div className="col col-md-6 d-flex justify-content-center">
-        <img src={logoSVG} style={{height:"10rem"}} />
+        <img src={logoSVG} style={{height:"20rem"}} />
         </div>
         </div>
         </div>
