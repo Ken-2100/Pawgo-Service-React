@@ -1,3 +1,4 @@
+import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Button from "../components/UI/Button";
 import Input from "../components/UI/InputBlock";
@@ -17,8 +18,8 @@ export default function LoginPage(){
         <Header />
         <div className="form-signup bg-dark ">
        
-        <form className="py-5 text-light " onSubmit={handleSubmit}>
-            <p className="h2 text-center text-light">Sign up</p>
+        <form className="container py-5 text-light " onSubmit={handleSubmit}>
+            <p className="h2 text-light">Log In</p>
         
             <Input type="email" name='login' id='email'  label='Email or Username'/> 
             <Input type="password" name='password' id='password'  label='Password'/> 
@@ -30,6 +31,7 @@ export default function LoginPage(){
         
         </form>
         </div>
+        <Footer />
         </>
     )
 }

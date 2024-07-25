@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import logoIcon from './logo-transparent.png';
 
@@ -14,9 +15,9 @@ export default function Footer() {
     </a>
 
     <ul className="nav col-md-4 justify-content-end">
-      <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Home</a></li>
-      <li className="nav-item"><a href="#Services" className="nav-link px-2 text-body-secondary">Service</a></li>
-      <li className="nav-item"><a href="#AboutUs" className="nav-link px-2 text-body-secondary">About</a></li>
+      <li className="nav-item"><Link to="/home" className="nav-link px-2 text-body-secondary">Home</Link></li>
+      <li className="nav-item"><Link to="/shop" className="nav-link px-2 text-body-secondary">Service</Link></li>
+      <li className="nav-item"><Link to="/aboutUs" className="nav-link px-2 text-body-secondary">About</Link></li>
     </ul>
   </div>
 
