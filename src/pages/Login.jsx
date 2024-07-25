@@ -1,3 +1,4 @@
+import Header from "../components/Header/Header";
 import Button from "../components/UI/Button";
 import Input from "../components/UI/InputBlock";
 import { Link } from "react-router-dom";
@@ -12,6 +13,8 @@ export default function LoginPage(){
         // also extract entered by the user into object e.g {full-name : 'ken mark amandoron'}
     }
     return(
+        <>
+        <Header />
         <div className="form-signup bg-dark ">
        
         <form className="py-5 text-light " onSubmit={handleSubmit}>
@@ -27,5 +30,6 @@ export default function LoginPage(){
         
         </form>
         </div>
+        </>
     )
 }
