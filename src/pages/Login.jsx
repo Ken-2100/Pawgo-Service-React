@@ -1,5 +1,6 @@
 import Button from "../components/UI/Button";
 import Input from "../components/UI/InputBlock";
+import { Link } from "react-router-dom";
 
 export default function LoginPage(){
     function handleSubmit(event){
@@ -20,7 +21,7 @@ export default function LoginPage(){
             <Input type="password" name='password' id='password'  label='Password'/> 
         
             <Button className="btn btn-primary" type="submit"> Login </Button>
-            <p className=""></p>
+            <p className="">New to Pawgo Shop? <Link className="text-danger link-underline-dark" to='/register'>Sign Up</Link> </p>
   
 
         
