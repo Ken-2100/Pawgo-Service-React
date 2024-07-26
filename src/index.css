@@ -231,12 +231,7 @@ text-align: center;
   background-color: rgba(0, 0, 0, 0.887);
 }
 
-.custom-login-btn {
-  background-color: #a82323;
-}
-.custom-signup-btn {
-  background-color: #a82323;
-}
+
 
 @keyframes fade-slide-up {
   from {

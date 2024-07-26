@@ -19,7 +19,7 @@ function App() {
 
   <UserProgressContextProvider>
    <CartContextProvider >
-   <GoTop />
+  
    <Cart />
    <Checkout />
    <FeedbackForm />
@@ -36,7 +36,7 @@ function App() {
      <Route path='/register' element={<Register />} />
   
     </Routes>
- 
+    <GoTop />
    </CartContextProvider>
    </UserProgressContextProvider>
 
