@@ -93,26 +93,28 @@ export default function LoginPage(){
       <>
        <Header />
     
-      <div className='row bg-dark text-white'> 
-      <div className="col-md-4 d-flex align-items-md-center justify-content-md-center ">
+      <div className='row bg-dark text-white py-5'> 
+      <div className="col-md-4 d-flex align-items-md-center justify-content-md-center justify-content-sm-center">
        <p className="h2 " >
               Sign in to your account
             </p>
             </div>
         <div className="col-md-4">
+        <div className="">
+         {generalError && <p className='text-danger bs-danger'>{generalError}</p>}
+         </div>
           <div className='d-flex justify-content-end'>
             
          
-         
-            {generalError && <p className='text-danger bs-danger'>{generalError}</p>}
+        
+            
            
             <form className='row' onSubmit={handleSubmit}>
           
-              <div>
+              <div className="col-md-12">
                 <Input
                   id='email'
                   name='login'
-                  className=''
                   autoComplete='email'
                   value={formData.login}
                   onChange={(e) => setFormData({ ...formData, login: e.target.value })}
@@ -122,7 +124,7 @@ export default function LoginPage(){
              
          
               <div className="row">
-              <div className="col-md-7">
+              <div className="col-md-9">
                   <Input
                     id='password'
                     name='password'
