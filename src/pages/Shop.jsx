@@ -3,8 +3,11 @@ import FoodItem from '../components/Food-Products/FoodItem';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 
+
 export default function Shop(){
+
   const [loadedFoods, setLoadedFoods] = useState([]);
+
 
   useEffect(()=>{
     fetch('https://api.escuelajs.co/api/v1/products')
@@ -17,6 +20,7 @@ export default function Shop(){
       });;
   },[]);
 
+ 
    return(
     <>
     <Header />

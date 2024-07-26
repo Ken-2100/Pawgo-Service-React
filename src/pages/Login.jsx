@@ -1,4 +1,4 @@
-// import Footer from "../components/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Button from "../components/UI/Button";
 import Input from "../components/UI/InputBlock";
@@ -96,7 +96,7 @@ export default function LoginPage(){
       <div className='row bg-dark text-white py-5'> 
       <div className="col-md-4 d-flex align-items-md-center justify-content-md-center justify-content-sm-center">
        <p className="h2 " >
-              Sign in to your account
+              Log In
             </p>
             </div>
         <div className="col-md-4">
@@ -118,7 +118,7 @@ export default function LoginPage(){
                   autoComplete='email'
                   value={formData.login}
                   onChange={(e) => setFormData({ ...formData, login: e.target.value })}
-                  label='Enter Username or Email' />
+                  label='Username or Email' />
                        {loginError && <p className=' text-sm '>{loginError}</p>}
               </div>
              
@@ -182,6 +182,7 @@ export default function LoginPage(){
          </div>
       
           </div>
+          <Footer className='stick-bottom'/>
       </>
     );
   };
