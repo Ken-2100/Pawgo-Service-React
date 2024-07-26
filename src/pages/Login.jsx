@@ -111,7 +111,7 @@ export default function LoginPage(){
            
             <form className='row' onSubmit={handleSubmit}>
           
-              <div className="col-md-12">
+              <div className="col-md">
                 <Input
                   id='email'
                   name='login'
@@ -169,14 +169,14 @@ export default function LoginPage(){
                     Forgot your password?
                   </a> */}
                 </div>
-              <div className="row col-md-7  ">
+              <div className="row col-md-11  ">
                 <Button className='btn-warning'>Login</Button>
               </div>
             </form>
             
             </div>
             </div>
-            <div className="col col-md-4 d-flex justify-content-md-start justify-content-sm-center">
+            <div className="col col-md-4 d-flex justify-content-md-start justify-content-sm-center align-items-md-center">
          <img src={logoSVG} style={{height:"15rem"}} alt="logo"/> 
          {/* <h2 className="d-flex align-items-center">PAWGO SHOP</h2> */}
          </div>
