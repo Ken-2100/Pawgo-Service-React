@@ -23,7 +23,7 @@ export default function Home(){
    <CarouselOne  />
    <Hero />
    {/* <AllCards /> */}
-   <Feedback />
+   <Feedback className='d-flex'/>
    <Goals />
     <Footer />
         </>

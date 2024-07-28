@@ -11,6 +11,7 @@ import Cart from './components/Cart.jsx';
 import Checkout from './components/Checkout.jsx';
 import Register from './pages/Register.jsx';
 import FeedbackForm from './components/Feedback/FeedbackForm.jsx';
+import FeedbackPage from './pages/FeedbackPage.jsx';
 
 
 
@@ -34,6 +35,7 @@ function App() {
      <Route path='/aboutUs' element={<AboutUs />} />
      <Route path='/login' element={<LoginPage />} />
      <Route path='/register' element={<Register />} />
+     <Route path='/feedback' element={<FeedbackPage />} />
   
     </Routes>
     <GoTop />

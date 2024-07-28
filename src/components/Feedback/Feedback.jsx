@@ -3,7 +3,7 @@ import Button from "../UI/Button";
 
 import UserProgressContext from "../../store/UserProgressContext";
 
-export default function Feedback(){
+export default function Feedback({className='',classNameH='' }){
   const [array, setArray] = useState([]);
   const userProgressCtx = useContext(UserProgressContext);
   
@@ -35,10 +35,10 @@ function HandleShowFeedback(){
       </Button>
         </section>
         <div className="container"> 
-        <div className="d-flex d-row text-center mx-5 ">
+        <div className={`d-row text-center mx-5 ${className}`}>
 
-       {array.slice(0,3).map((feedbackItem) =>(
-        <div className="col-lg-4 me-3" key={feedbackItem.id}>
+       {array.slice(2,5).map((feedbackItem) =>(
+        <div className={`col-lg my-5 ${classNameH}`} key={feedbackItem.id}>
     <img src={feedbackItem.avatar} alt="..." className='rounded-circle ' />
     <h2 className="fw-normal">{feedbackItem.first_name} </h2>
     {/* <p>{data.feedback.id}</p>  SAMPLE GET for feedback description*/}
